@@ -225,7 +225,7 @@ def _driver():
     else:
         slurmjob_template += "-24hr"
     slurmjob_target = \
-        f"{slurmjob_nameconv}{dates['start'].year:04d}" + \
+        f"{slurmjob_nameconv}_{dates['start'].year:04d}" + \
         f"{dates['start'].month:02d}.job"
     shutil.copy(slurmjob_template, slurmjob_target)
     _customize_slurmjob(slurmjob_target, config, dates, lisconfig_target, \
