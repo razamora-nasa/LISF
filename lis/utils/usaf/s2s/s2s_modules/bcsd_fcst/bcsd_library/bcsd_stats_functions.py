@@ -147,7 +147,7 @@ def lookup(query, vec1, vec2, dim, par, lu_type, mean, sd_val, skew, tiny):
             if par == 'PRCP':
                 ##### HACK
                 if mean == 0:
-                    print ("data HACK invoked")
+                    #print ("data HACK invoked")
                     val=0
                 else:
                     val=get_data_from_f_evi(mean, sd_val, query, tiny)
